@@ -11,5 +11,11 @@
 /*  Font  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap");
 /*  Main  */
+.container {
+  padding: 5rem 2rem;
+  background-color: #ff7a7a;
+  background-image: url("../assets/images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+}
 
 /*# sourceMappingURL=index.css.map */

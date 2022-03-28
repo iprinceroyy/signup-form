@@ -38,4 +38,9 @@ $f-700: 700;
 
 /*  Main  */
 
-.container {}
+.container {
+    padding: 5rem 2rem;
+    background-color: $red;
+    background-image: url("../assets/images/bg-intro-mobile.png");
+    background-repeat: no-repeat;
+}
