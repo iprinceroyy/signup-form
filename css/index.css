@@ -16,6 +16,25 @@
   background-color: #ff7a7a;
   background-image: url("../assets/images/bg-intro-mobile.png");
   background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 720px) {
+  .container {
+    background-image: url("../assets/images/bg-intro-desktop.png");
+  }
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+}
+@media (min-width: 720px) {
+  .component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
