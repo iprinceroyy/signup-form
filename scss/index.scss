@@ -24,7 +24,7 @@ $grayish-blue: hsl(246, 25%, 77%);
 
 /*  Body Copy  */
 
-$font-size: 16px;
+$font-size: 1rem;
 
 /*  Font  */
 
@@ -39,10 +39,11 @@ $f-700: 700;
 /*  Main  */
 
 .container {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
     background-color: $red;
     background-image: url("../assets/images/bg-intro-mobile.png");
     background-repeat: no-repeat;
+    font-size: $font-size;
     font-family: $poppins;
     @media (min-width: 720px) {
         background-image: url("../assets/images/bg-intro-desktop.png");
@@ -55,7 +56,37 @@ $f-700: 700;
     align-items: center;
     border: 2px solid;
     @media (min-width: 720px) {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
+}
+
+.intro h1 {
+    font-size: 2.1rem;
+    color: white;
+    font-weight: $f-700;
+    text-align: center;
+    margin: 0 3rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    margin: 1.5rem 1.3rem;
+}
+
+.signup {
+    margin: 1rem;
+}
+
+.signup h2 {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    font-weight: $f-600;
+    border: 1px solid;
+    padding: 1rem 6rem;
 }

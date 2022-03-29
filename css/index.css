@@ -12,10 +12,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap");
 /*  Main  */
 .container {
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   background-color: #ff7a7a;
   background-image: url("../assets/images/bg-intro-mobile.png");
   background-repeat: no-repeat;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 @media (min-width: 720px) {
@@ -32,9 +33,39 @@
 }
 @media (min-width: 720px) {
   .component {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.intro h1 {
+  font-size: 2.1rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 3rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: white;
+  text-align: center;
+  margin: 1.5rem 1.3rem;
+}
+
+.signup {
+  margin: 1rem;
+}
+
+.signup h2 {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid;
+  padding: 1rem 6rem;
 }
 
 /*# sourceMappingURL=index.css.map */
