@@ -45,6 +45,7 @@ $f-700: 700;
     background-repeat: no-repeat;
     font-size: $font-size;
     font-family: $poppins;
+    font-weight: $f-400;
     @media (min-width: 720px) {
         background-image: url("../assets/images/bg-intro-desktop.png");
     }
@@ -85,8 +86,57 @@ $f-700: 700;
 .signup h2 {
     font-size: 1rem;
     color: white;
+    font-weight: $f-400;
     text-align: center;
+    margin: 1rem 0;
+    padding: 1.5rem 5rem;
+    border-radius: 12px;
+    background-color: $blue;
+    box-shadow: 0 8px rgba($dark-blue, 0.3);
+}
+
+h2 span {
+    font-weight: $f-700;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
     font-weight: $f-600;
-    border: 1px solid;
-    padding: 1rem 6rem;
+    border: 1px solid $grayish-blue;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+}
+
+button[type="submit"] {
+    color: white;
+    font-weight: $f-600;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: $green;
+    box-shadow: 0 5px hsl(154, 33%, 49%);
+}
+
+.form p {
+    font-size: 0.8rem;
+    font-weight: $f-500;
+    color: $grayish-blue;
+    text-align: center;
+    span {
+        color: $red;
+        font-weight: $f-700;
+    }
 }
