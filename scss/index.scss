@@ -24,7 +24,7 @@ $grayish-blue: hsl(246, 25%, 77%);
 
 /*  Body Copy  */
 
-$font-size: 1rem;
+$f-size: 1rem;
 
 /*  Font  */
 
@@ -36,6 +36,27 @@ $f-500: 500;
 $f-600: 600;
 $f-700: 700;
 
+/*  Mixins  */
+
+@mixin display-theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin typography($size: 1rem) {
+    font-size: $size;
+    color: #fff;
+    text-align: center;
+}
+
+@mixin box-theme($bg-color: #fff) {
+    border-radius: 12px;
+    background-color: $bg-color;
+    box-shadow: 0 8px rgba($dark-blue, 0.3);
+}
+
+
 /*  Main  */
 
 .container {
@@ -43,59 +64,66 @@ $f-700: 700;
     background-color: $red;
     background-image: url("../assets/images/bg-intro-mobile.png");
     background-repeat: no-repeat;
-    font-size: $font-size;
+    background-position: center top;
+    font-size: $f-size;
     font-family: $poppins;
     font-weight: $f-400;
     @media (min-width: 720px) {
+        padding: 6rem;
         background-image: url("../assets/images/bg-intro-desktop.png");
     }
 }
 
 .component {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display-theme;
     @media (min-width: 720px) {
         display: -ms-grid;
         display: grid;
+        column-gap: 2rem;
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }
 
 .intro h1 {
-    font-size: 2.1rem;
-    color: white;
+    @include typography($size: clamp(2.1rem, -0.875rem + 8.333vw, 2.5rem));
     font-weight: $f-700;
-    text-align: center;
     margin: 0 3rem;
+    @media (min-width: 720px) {
+        text-align: start;
+        margin-left: 1rem;
+        margin-right: 30%;
+    }
 }
 
 .intro p {
-    font-size: 1.1rem;
-    color: white;
-    text-align: center;
+    @include typography($size: 1.1rem);
     margin: 1.5rem 1.3rem;
+    @media (min-width: 720px) {
+        text-align: start;
+        margin-left: 1rem;
+    }
 }
+
+
+/*  signup  */
 
 .signup {
     margin: 1rem;
 }
 
 .signup h2 {
-    font-size: 1rem;
-    color: white;
+    @include typography;
     font-weight: $f-400;
-    text-align: center;
     margin: 1rem 0;
     padding: 1.5rem 5rem;
-    border-radius: 12px;
-    background-color: $blue;
-    box-shadow: 0 8px rgba($dark-blue, 0.3);
-}
-
-h2 span {
-    font-weight: $f-700;
+    @include box-theme($bg-color: $blue);
+    span {
+        font-weight: $f-700;
+    }
+    @media (min-width: 720px) {
+        padding: 1rem;
+    }
 }
 
 .form {
@@ -103,9 +131,7 @@ h2 span {
     flex-direction: column;
     margin: 1.5rem 0;
     padding: 1.5rem;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 5px rgba($dark-blue, 0.3);
+    @include box-theme;
 }
 
 input[type="text"],
@@ -131,10 +157,11 @@ button[type="submit"] {
 }
 
 .form p {
-    font-size: 0.8rem;
+    @include typography($size: 0.8rem);
     font-weight: $f-500;
     color: $grayish-blue;
-    text-align: center;
+    line-height: 2;
+    margin: 0 3.1rem;
     span {
         color: $red;
         font-weight: $f-700;

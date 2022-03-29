@@ -10,18 +10,21 @@
 /*  Body Copy  */
 /*  Font  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap");
+/*  Mixins  */
 /*  Main  */
 .container {
   padding: 5rem 1rem;
   background-color: #ff7a7a;
   background-image: url("../assets/images/bg-intro-mobile.png");
   background-repeat: no-repeat;
+  background-position: center top;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 @media (min-width: 720px) {
   .container {
+    padding: 6rem;
     background-image: url("../assets/images/bg-intro-desktop.png");
   }
 }
@@ -35,44 +38,63 @@
   .component {
     display: -ms-grid;
     display: grid;
+    column-gap: 2rem;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .intro h1 {
-  font-size: 2.1rem;
-  color: white;
-  font-weight: 700;
+  font-size: clamp(2.1rem, -0.875rem + 8.333vw, 2.5rem);
+  color: #fff;
   text-align: center;
+  font-weight: 700;
   margin: 0 3rem;
+}
+@media (min-width: 720px) {
+  .intro h1 {
+    text-align: start;
+    margin-left: 1rem;
+    margin-right: 30%;
+  }
 }
 
 .intro p {
   font-size: 1.1rem;
-  color: white;
+  color: #fff;
   text-align: center;
   margin: 1.5rem 1.3rem;
 }
+@media (min-width: 720px) {
+  .intro p {
+    text-align: start;
+    margin-left: 1rem;
+  }
+}
 
+/*  signup  */
 .signup {
   margin: 1rem;
 }
 
 .signup h2 {
   font-size: 1rem;
-  color: white;
-  font-weight: 400;
+  color: #fff;
   text-align: center;
+  font-weight: 400;
   margin: 1rem 0;
   padding: 1.5rem 5rem;
   border-radius: 12px;
   background-color: #6055a5;
   box-shadow: 0 8px rgba(62, 60, 73, 0.3);
 }
-
-h2 span {
+.signup h2 span {
   font-weight: 700;
+}
+@media (min-width: 720px) {
+  .signup h2 {
+    padding: 1rem;
+  }
 }
 
 .form {
@@ -80,9 +102,9 @@ h2 span {
   flex-direction: column;
   margin: 1.5rem 0;
   padding: 1.5rem;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 5px rgba(62, 60, 73, 0.3);
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 8px rgba(62, 60, 73, 0.3);
 }
 
 input[type=text],
@@ -109,9 +131,12 @@ button[type=submit] {
 
 .form p {
   font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
   font-weight: 500;
   color: #b9b6d3;
-  text-align: center;
+  line-height: 2;
+  margin: 0 3.1rem;
 }
 .form p span {
   color: #ff7a7a;
