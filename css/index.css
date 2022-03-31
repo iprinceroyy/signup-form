@@ -115,6 +115,9 @@ input[type=email] {
   border-radius: 5px;
   margin-bottom: 0.8rem;
   padding: 1rem;
+  background-image: url("../assets/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 5% top 50%;
 }
 
 button[type=submit] {
@@ -142,5 +145,7 @@ button[type=submit] {
   color: #ff7a7a;
   font-weight: 700;
 }
+
+/* Error Messages  */
 
 /*# sourceMappingURL=index.css.map */
