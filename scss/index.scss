@@ -142,10 +142,13 @@ input[type="email"] {
     border-radius: 5px;
     margin-bottom: 0.8rem;
     padding: 1rem;
+}
+
+.invalid {
     background-image: url("../assets/images/icon-error.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 50%;
-    //border: 2px solid $red;
+    border: 2px solid $red;
 }
 
 button[type="submit"] {
