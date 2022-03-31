@@ -91,12 +91,13 @@ $f-700: 700;
     margin: 0 3rem;
     @media (min-width: 720px) {
         text-align: start;
+        line-height: 1.2;
         margin-left: 1rem;
         margin-right: 30%;
     }
 }
 
-.intro p {
+.intro>p {
     @include typography($size: 1.1rem);
     margin: 1.5rem 1.3rem;
     @media (min-width: 720px) {
@@ -151,7 +152,7 @@ input[type="email"] {
     border: 2px solid $red;
 }
 
-button[type="submit"] {
+.btn {
     color: white;
     font-weight: $f-600;
     text-transform: uppercase;
@@ -159,11 +160,14 @@ button[type="submit"] {
     padding: 1rem;
     border-width: 0;
     border-radius: 5px;
-    background-color: $green;
+    background-color: rgba($green, 1);
     box-shadow: 0 5px hsl(154, 33%, 49%);
+    &:active {
+        background-color: rgba($green, 0.9);
+    }
 }
 
-.form p {
+.form .terms {
     @include typography($size: 0.8rem);
     font-weight: $f-500;
     color: $grayish-blue;
@@ -177,3 +181,10 @@ button[type="submit"] {
 
 
 /* Error Messages  */
+
+.form .error {
+    display: none;
+    font-size: 0.8rem;
+    color: $red;
+    text-align: end;
+}

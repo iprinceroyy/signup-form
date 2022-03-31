@@ -29,26 +29,26 @@
             </div>
             <div class="signup">
                 <h2><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
-                <form class="form">
+                <form class="form" novalidate>
                     <label for="fname"></label>
                     <input type="text" class="input" id="fname" placeholder="First Name">
-                    <p class="fname-error"></p>
+                    <p class="error">First name cannot be empty</p>
 
                     <label for="lname"></label>
                     <input type="text" class="input" id="lname" placeholder="Last Name">
-                    <p class="lanme-error"></p>
+                    <p class="error">Last name cannot be empty</p>
 
                     <label for="email "></label>
                     <input type="email" class="input" id="email" placeholder="Email">
-                    <p class="email-error"></p>
+                    <p class="error">Looks like this is not an email</p>
 
                     <label for="password"></label>
                     <input type="password" class="input" id="password" placeholder="Password">
-                    <p class="password-error"></p>
+                    <p class="error">Password cannot be empty</p>
 
-                    <button type="submit" aria-label="submit button" id="submitBtn">claim your free trail</button>
+                    <button type="submit" class="btn" aria-label="submit button" id="submitBtn">claim your free trail</button>
 
-                    <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+                    <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
                 </form>
 
             </div>

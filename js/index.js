@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const inputs = document.getElementsByClassName("inputs");
+const inputs = document.querySelectorAll("input");
 const email = document.getElementById("email");
 
 function isValidEmail(userEmail) {
@@ -12,21 +12,19 @@ function isValidEmail(userEmail) {
 const invalid = input => {
     input.placeholder = "";
     input.classList.add("invalid");
-}
+    input.nextElementSibling.style.display = "contents";
 
-const valid = input => {
-    input.placeholder = "";
-    input.classList.remove("invalid");
 }
 
 form.addEventListener("submit", e => {
     e.preventDefault();
-
     inputs.forEach(input => {
         const inputVal = input.value.trim();
 
-        inputVal ? valid(input) : invalid(input);
+        inputVal === "" && invalid(input);
 
-        if (input === email) isValidEmail(input.value) && valid(input);
-    })
+        if (input === email) isValidEmail(input.value) && "";
+    });
+
+
 });

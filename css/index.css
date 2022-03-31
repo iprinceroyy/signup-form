@@ -54,19 +54,20 @@
 @media (min-width: 720px) {
   .intro h1 {
     text-align: start;
+    line-height: 1.2;
     margin-left: 1rem;
     margin-right: 30%;
   }
 }
 
-.intro p {
+.intro > p {
   font-size: 1.1rem;
   color: #fff;
   text-align: center;
   margin: 1.5rem 1.3rem;
 }
 @media (min-width: 720px) {
-  .intro p {
+  .intro > p {
     text-align: start;
     margin-left: 1rem;
   }
@@ -124,7 +125,7 @@ input[type=email] {
   border: 2px solid #ff7a7a;
 }
 
-button[type=submit] {
+.btn {
   color: white;
   font-weight: 600;
   text-transform: uppercase;
@@ -135,8 +136,11 @@ button[type=submit] {
   background-color: #38cc8c;
   box-shadow: 0 5px #54a682;
 }
+.btn:active {
+  background-color: rgba(56, 204, 140, 0.9);
+}
 
-.form p {
+.form .terms {
   font-size: 0.8rem;
   color: #fff;
   text-align: center;
@@ -145,11 +149,17 @@ button[type=submit] {
   line-height: 2;
   margin: 0 2.33rem;
 }
-.form p span {
+.form .terms span {
   color: #ff7a7a;
   font-weight: 700;
 }
 
 /* Error Messages  */
+.form .error {
+  display: none;
+  font-size: 0.8rem;
+  color: #ff7a7a;
+  text-align: end;
+}
 
 /*# sourceMappingURL=index.css.map */
