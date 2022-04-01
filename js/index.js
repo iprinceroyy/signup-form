@@ -12,7 +12,7 @@ function isValidEmail(userEmail) {
 const invalid = input => {
     input.placeholder = "";
     input.classList.add("invalid");
-    input.nextElementSibling.style.display = "contents";
+    input.nextElementSibling.classList.add("show");
 
 }
 
@@ -23,8 +23,7 @@ form.addEventListener("submit", e => {
 
         inputVal === "" && invalid(input);
 
-        if (input === email) isValidEmail(input.value) && "";
+        if (input === email) !isValidEmail(input.value) && invalid(input);
     });
-
 
 });

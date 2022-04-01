@@ -143,6 +143,9 @@ input[type="email"] {
     border-radius: 5px;
     margin-bottom: 0.8rem;
     padding: 1rem;
+    &:focus {
+        border: 1px solid $blue;
+    }
 }
 
 .invalid {
@@ -183,8 +186,12 @@ input[type="email"] {
 /* Error Messages  */
 
 .form .error {
-    display: none;
     font-size: 0.8rem;
     color: $red;
     text-align: end;
+    display: none;
+}
+
+.show {
+    display: contents;
 }

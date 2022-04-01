@@ -117,6 +117,11 @@ input[type=email] {
   margin-bottom: 0.8rem;
   padding: 1rem;
 }
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+  border: 1px solid #6055a5;
+}
 
 .invalid {
   background-image: url("../assets/images/icon-error.svg");
@@ -156,10 +161,14 @@ input[type=email] {
 
 /* Error Messages  */
 .form .error {
-  display: none;
   font-size: 0.8rem;
   color: #ff7a7a;
   text-align: end;
+  display: none;
+}
+
+.show {
+  display: contents;
 }
 
 /*# sourceMappingURL=index.css.map */
