@@ -12,6 +12,8 @@ function isValidEmail(userEmail) {
 const invalid = input => {
     input.placeholder = "";
     input.classList.add("invalid");
+    input.style.marginBottom = 0;
+    input.nextElementSibling.classList.remove("hide");
     input.nextElementSibling.classList.add("show");
 
 }

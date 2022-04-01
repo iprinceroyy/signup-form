@@ -144,15 +144,19 @@ input[type="email"] {
     margin-bottom: 0.8rem;
     padding: 1rem;
     &:focus {
-        border: 1px solid $blue;
+        outline-color: $blue;
     }
 }
+
+
+/*  this invalid class will be added on error  */
 
 .invalid {
     background-image: url("../assets/images/icon-error.svg");
     background-repeat: no-repeat;
     background-position: right 5% top 50%;
-    border: 2px solid $red;
+    outline: 2px solid $red;
+    margin-bottom: 0;
 }
 
 .btn {
@@ -163,9 +167,11 @@ input[type="email"] {
     padding: 1rem;
     border-width: 0;
     border-radius: 5px;
+    letter-spacing: 1px;
     background-color: rgba($green, 1);
     box-shadow: 0 5px hsl(154, 33%, 49%);
     &:active {
+        cursor: pointer;
         background-color: rgba($green, 0.9);
     }
 }
@@ -183,15 +189,28 @@ input[type="email"] {
 }
 
 
+/*  Footer  */
+
+.attribution {
+    @include typography;
+    font-family: $poppins;
+    background-color: $red;
+}
+
+
 /* Error Messages  */
 
-.form .error {
+.input+p {
     font-size: 0.8rem;
     color: $red;
     text-align: end;
+    margin-bottom: 0.8rem;
+}
+
+.form .hide {
     display: none;
 }
 
-.show {
-    display: contents;
+.form .show {
+    display: block;
 }
